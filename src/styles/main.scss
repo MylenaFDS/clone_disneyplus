@@ -1,0 +1,7 @@
+// Definindo variável no SCSS
+$bgColor: rgb(30, 202, 199);
+
+// Usando a variável no estilo
+body {
+    background-color: $bgColor;
+}
