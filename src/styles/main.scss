@@ -1,7 +1,70 @@
-// Definindo variável no SCSS
-$bgColor: rgb(30, 202, 199);
+//Seletor
 
-// Usando a variável no estilo
-body {
-    background-color: $bgColor;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
+
+//Variáveis:
+
+$corDeFundo:#040714;
+$corTextoPrincipal:silver;
+$corTextoSecundario:#f9f9f9;
+
+
+//Estilizações:
+    //Estilização do corpo do projeto:
+        body{
+            background-color:$corDeFundo;
+        }
+
+    //mixins:
+        @mixin text($fontSize:16px){
+            font-size:$fontSize;
+            line-height:$fontSize + 10px;
+            color:$corTextoPrincipal;
+        }
+
+        @mixin title($fontSize:40px){
+            @include text($fontSize);
+            color:$corTextoSecundario;
+        }
+
+    //Classes
+        //Classes text
+            .text--big{
+                @include text(18px);
+            }
+
+            .text{
+                @include text;
+            }
+
+            .text--small{
+                @include text(12px);
+            }
+
+        //Classe link-text
+            .link-text{
+                @include text(18px);
+                color:$corTextoSecundario;
+                text-decoration: underline
+            }
+
+        //Classes title
+            .title--big{
+                @include title(44px);
+            }
+
+            .title{
+                @include title;
+            }
+
+            .title--small{
+                @include title(28px);
+            }
+
+
+
