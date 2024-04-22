@@ -1,7 +1,18 @@
 //Importações
+@use 'variaveis';
 @use 'hero';
 
+@font-face {
+        font-family: Avenir;
+        src: url(../../assets/fonts/Avenir-Regular.woff2);
+        font-weight:400;
+    }
 
+    @font-face {
+        font-family: Avenir;
+        src: url(../../assets/fonts/Avenir-Bold.woff2);
+        font-weight:700;
+    }
 //Seletor
 
 *{
@@ -11,29 +22,26 @@
 
 }
 
-//Variáveis:
 
-$corDeFundo:#040714;
-$corTextoPrincipal:silver;
-$corTextoSecundario:#f9f9f9;
 
 
 //Estilizações:
     //Estilização do corpo do projeto:
         body{
-            background-color:$corDeFundo;
+            background-color:variaveis.$corDeFundo;
+            font-family: Avenir,sans-serif;
         }
 
     //mixins:
         @mixin text($fontSize:16px){
             font-size:$fontSize;
             line-height:$fontSize + 10px;
-            color:$corTextoPrincipal;
+            color:variaveis.$corTextoPrincipal;
         }
 
         @mixin title($fontSize:40px){
             @include text($fontSize);
-            color:$corTextoSecundario;
+            color:variaveis.$corTextoSecundario;
         }
 
     //Classes
@@ -53,7 +61,7 @@ $corTextoSecundario:#f9f9f9;
         //Classe link-text
             .link-text{
                 @include text(18px);
-                color:$corTextoSecundario;
+                color:variaveis.$corTextoSecundario;
                 text-decoration: underline
             }
 
