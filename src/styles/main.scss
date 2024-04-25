@@ -1,6 +1,7 @@
 //Importações
 @use 'variaveis';
 @use 'hero';
+@use 'shows';
 
 @font-face {
         font-family: Avenir;
@@ -19,17 +20,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: Avenir,sans-serif;
 }
-
-
-
 
 //Estilizações:
     //Estilização do corpo do projeto:
         body{
             background-color:variaveis.$corDeFundo;
-            font-family: Avenir,sans-serif;
+            
+            
         }
 
     //mixins:
